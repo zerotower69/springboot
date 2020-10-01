@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>分页测试</title>
+    <!-- 引入vue -->
+    <script src="http://unpkg.com/vue/dist/vue.js "></script>
+    <!-- 引入 javascript -->
+    <script src="http://unpkg.com/element-ui@2.13.2/lib/index.js"></script>
+    <!-- 引入 样式表  -->
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <script type="text/javascript" src="https://springztmall.oss-cn-beijing.aliyuncs.com/static/axios/dist/axios.js">
+    </script>
+</head>
+<body>
+    <!-- 在这里引入内容 -->
+    <div id="app">
+        <!-- 记得写id -->
+        <template>
+            <el-table :data="list" stripe style="width: 80%;height: 60%;" height="300">
+                <el-table-column label="序号" width="80">
+                    <template slot-scope="scope">
+                        <span>{{(current-1)*limit+scope.$index+1}}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column prop="productName" label="品名">
+                </el-table-column>
+            </el-table>
+        </template>
+        <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange"
+            :current-page="current" :page-sizes="[5,10,20]" :page-size="limit"
+            layout="total, prev, pager,next,sizes,jumper" :total="total" hide-on-single-page></el-pagination>
+        </el-pagination>
+    </div>
+</body>
+<script src="../static/js/main.js"></script>
+</html>

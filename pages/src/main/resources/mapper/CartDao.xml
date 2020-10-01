@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.zerotower.learn.pages.dao.CartDao">
+
+    <resultMap type="xyz.zerotower.learn.pages.entity.CartEntity" id="CartMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+        <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+        <result property="productCode" column="product_code" jdbcType="VARCHAR"/>
+        <result property="productCategory" column="product_category" jdbcType="VARCHAR"/>
+        <result property="eachPrice" column="each_price" jdbcType="NUMERIC"/>
+        <result property="productNum" column="product_num" jdbcType="INTEGER"/>
+        <result property="amount" column="amount" jdbcType="NUMERIC"/>
+        <result property="active" column="active" jdbcType="INTEGER"/>
+        <result property="orderCode" column="order_code" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+<!--    &lt;!&ndash;新增所有列&ndash;&gt;-->
+<!--    <insert id="insert" keyProperty="id" useGeneratedKeys="true">-->
+<!--        insert into mymall.cart(user_name, user_id, product_name, product_code, product_category, each_price, product_num, amount, active, order_code, create_time)-->
+<!--        values (#{userName}, #{userId}, #{productName}, #{productCode}, #{productCategory}, #{eachPrice}, #{productNum}, #{amount}, #{active}, #{orderCode}, #{createTime})-->
+<!--    </insert>-->
+
+<!--    &lt;!&ndash;通过主键修改数据&ndash;&gt;-->
+<!--    <update id="update">-->
+<!--        update mymall.cart-->
+<!--        <set>-->
+<!--            <if test="userName != null and userName != ''">-->
+<!--                user_name = #{userName},-->
+<!--            </if>-->
+<!--            <if test="userId != null and userId != ''">-->
+<!--                user_id = #{userId},-->
+<!--            </if>-->
+<!--            <if test="productName != null and productName != ''">-->
+<!--                product_name = #{productName},-->
+<!--            </if>-->
+<!--            <if test="productCode != null and productCode != ''">-->
+<!--                product_code = #{productCode},-->
+<!--            </if>-->
+<!--            <if test="productCategory != null and productCategory != ''">-->
+<!--                product_category = #{productCategory},-->
+<!--            </if>-->
+<!--            <if test="eachPrice != null">-->
+<!--                each_price = #{eachPrice},-->
+<!--            </if>-->
+<!--            <if test="productNum != null">-->
+<!--                product_num = #{productNum},-->
+<!--            </if>-->
+<!--            <if test="amount != null">-->
+<!--                amount = #{amount},-->
+<!--            </if>-->
+<!--            <if test="active != null">-->
+<!--                active = #{active},-->
+<!--            </if>-->
+<!--            <if test="orderCode != null and orderCode != ''">-->
+<!--                order_code = #{orderCode},-->
+<!--            </if>-->
+<!--            <if test="createTime != null">-->
+<!--                create_time = #{createTime},-->
+<!--            </if>-->
+<!--        </set>-->
+<!--        where id = #{id}-->
+<!--    </update>-->
+
+<!--    &lt;!&ndash;通过主键删除&ndash;&gt;-->
+<!--    <delete id="deleteById">-->
+<!--        delete from mymall.cart where id = #{id}-->
+<!--    </delete>-->
+
+</mapper>
