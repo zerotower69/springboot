@@ -7,24 +7,24 @@ server:
 spring:
   application:
     name: learn-pages
-#¾²Ì¬×ÊÔ´·ÅĞĞ
+#é™æ€èµ„æºæ”¾è¡Œ
   resources:
     static-locations: classpath:/static
   mvc:
     static-path-pattern: /static/**
   # datasource
-#basic setttings
+#basic setttings  #è¯·å…ˆé…ç½®è‡ªå·±æ•°æ®åº“åœ°å€å’Œè´¦æˆ·å¯†ç 
   datasource:
-    url: jdbc:mysql://182.92.200.48:3306/mymall?characterEncoding=UTF8&useSSL=false
-    username: root
-    password: 123456
+    url: 
+    username: 
+    password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
     platform: mysql
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
-      #×îĞ¡Á¬½ÓÊı
+      #æœ€å°è¿æ¥æ•°
       minimum-idle: 1
-      #×î´óÁ¬½ÓÊı
+      #æœ€å¤§è¿æ¥æ•°
       maximum-pool-size: 20
       auto-commit: true
       idle-timeout: 10000
